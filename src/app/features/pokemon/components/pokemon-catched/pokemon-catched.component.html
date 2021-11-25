@@ -1,0 +1,16 @@
+<div class="card my-5">
+  <div class="card-body">
+    <h5 class="card-title">Catched Pokemon!</h5>
+    <ul class="list-group list-group-flush">
+      <ng-container *ngFor="let item of pokemon">
+        <div
+          class="list-group-item"
+          [routerLink]="['./details', TYPE, item.id]"
+        >
+          <img src="{{ item.sprites.front_default }}" alt="" />
+          <p>{{ item.name }}</p>
+        </div>
+      </ng-container>
+    </ul>
+  </div>
+</div>
